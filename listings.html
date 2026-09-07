@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Listings — Sharma Property, Indore</title>
+<meta name="description" content="Browse residential, commercial and industrial properties for sale and rent with Sharma Property, Indore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <a href="index.html"><span class="brand-name">Sharma Property</span></a>
+      <span class="brand-tag">Your Trusted Partner in Real Estate</span>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="listings.html" class="active">Listings</a>
+      <a href="add-listing.html">List Your Property</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:+916261002293" class="nav-phone">+91 62610 02293</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>All listings</h2>
+      <p>Filter by property type or purpose, or search by locality and keyword.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="filter-bar">
+      <div class="filter-group">
+        <button class="chip active" data-filter-category="All">All types</button>
+        <button class="chip" data-filter-category="Residential">Residential</button>
+        <button class="chip" data-filter-category="Commercial">Commercial</button>
+        <button class="chip" data-filter-category="Industrial">Industrial</button>
+      </div>
+      <div class="filter-group">
+        <button class="chip active" data-filter-purpose="All">Sale &amp; Rent</button>
+        <button class="chip" data-filter-purpose="Sale">Sale</button>
+        <button class="chip" data-filter-purpose="Rent">Rent</button>
+      </div>
+      <input type="search" id="listing-search" class="search-input" placeholder="Search locality or keyword…">
+    </div>
+    <div class="results-count" id="results-count"></div>
+    <div class="listings-grid" id="all-listings-grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-name">Sharma Property</span>
+        <p>Residential, commercial and industrial property — sale and rent — across Indore.</p>
+      </div>
+      <ul class="contact-list" style="min-width:260px;">
+        <li style="border-top:none;padding-top:0;"><span class="label" style="color:var(--brass-light);">Phone</span><span><a href="tel:+916261002293">+91 62610 02293</a></span></li>
+        <li><span class="label" style="color:var(--brass-light);">Email</span><span><a href="mailto:adarshsharmaji751@gmail.com">adarshsharmaji751@gmail.com</a></span></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Sharma Property. All rights reserved.</span>
+      <span>Blue Water Park Road, Neer Nagar, Indore (M.P.)</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/916261002293" class="wa-float" target="_blank" rel="noopener">WhatsApp Us</a>
+
+<div class="modal-overlay" id="listing-modal">
+  <div class="modal">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="modal-media"></div>
+    <div class="modal-thumbs"></div>
+    <div class="modal-body">
+      <div class="card-cat modal-cat"></div>
+      <h3 class="modal-title"></h3>
+      <div class="card-locality modal-locality"></div>
+      <div class="modal-price"></div>
+      <div class="card-area modal-area" style="margin-bottom:16px;"></div>
+      <p class="modal-desc"></p>
+      <div class="modal-tags"></div>
+      <p style="margin-top:18px;font-size:0.85rem;" class="modal-contact-note"></p>
+      <a href="https://wa.me/916261002293" class="btn" target="_blank" rel="noopener">Ask about this property</a>
+    </div>
+  </div>
+</div>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="js/sheet-config.js"></script>
+<script src="js/sheet-loader.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
